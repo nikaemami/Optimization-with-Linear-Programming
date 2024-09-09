@@ -3,6 +3,51 @@ Some practical application of linear programming in optimization problems using 
 
 # Problem 1: Investment Optimization with Linear Programming
 
+In this part, we find the shortest distance between the origin (A) and the destination (E) using linear programming:
+
+
+<img src="images/4/1.png" width="500"/>
+
+
+First we model the problem to a Linear Programming problem:
+
+
+The size of each side is the constraint for the xi corresponding to that side. The xi for each side, gets a value of 0 or ,1 and demonstrates whether or not that side is in the path.
+
+
+- X1: AB = 2 
+- X2 : AC = 7
+- X3:BC= 10
+- X4: BE= 30
+- X5: CB = 10
+- X6: CD = 8
+- X7: DE = 5
+
+  Starting from A, it has to choose AB or AC (×1+×2= 1)
+
+
+  If it chooses AB, it has to choose BC or BE next.
+
+
+  If it chooses AC, it has to choose CB or CD next.
+
+
+  If it chooses CD, it will have to choose DE to reach the destination.
+
+
+  Finally, it has to choose between BE or DE to get to E. (×4+×7 = 1)
+
+
+  Here are the results:
+
+  
+<img src="images/4/2.png" width="500"/>
+
+min distance= 20.0
+
+
+# Problem 2: Investment Optimization with Linear Programming
+
 In this project, we solve a linear programming problem related to optimal investment in two entrepreneurial ventures. You are given the opportunity to invest $6000 in two different businesses, each requiring both cash and time commitment. Each venture offers flexibility, allowing you to invest any proportion of a full partnership. The goal is to maximize your total estimated profit while managing your time and financial constraints.
 
 ## Problem Overview
@@ -26,7 +71,7 @@ The results are as below:
 <img src="images/1/1.png" width="500"/>
 
 
-# Problem 2: Optimizing Triangle Perimeter Using Linear Programming
+# Problem 3: Optimizing Triangle Perimeter Using Linear Programming
 
 We consider a given triangle with sides:
 (1 + x), (7 + x - 1.5y), (8 - x - 0.5y)
@@ -52,7 +97,7 @@ We determine the sides of the triangle using Linear Programming with the Pyomo p
 <img src="images/2/5.png" width="500"/>
 
 
-# Problem 3: Linear Programming for Minimizing Manhattan Distance
+# Problem 4: Linear Programming for Minimizing Manhattan Distance
 
 An online store aims to set up a city-based delivery center for in-person order pickups. The goal is to minimize the total distance from the center to all customer locations, calculated using the Manhattan distance formula.
 
